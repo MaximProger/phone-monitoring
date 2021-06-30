@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>
+		Главная
+	</title>
+	<meta name="description" content="Startup HTML">
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="css/include/all.min.css">
+	<link rel="stylesheet" href="css/include/select2.min.css">
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<header class="header" id="header">
+		<div class="container container--fluid">
+			<div class="header__inner">
+				<a href="/" class="logo">
+					<img class="logo__img" width="203" height="32" src="images/dist/logo.svg" alt="img" loading="lazy">
+				</a>
+
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="service.html" class="nav__link">
+								О сервисе
+							</a>
+						</li>
+
+						<li class="nav__item">
+							<a href="agreement.html" class="nav__link">
+								Лицензионное соглашение
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="btn__wrapper header__btn__wrapper">
+					<button class="btn header__btn" type="button" data-modal="#modalRegistration">
+						Зарегистрироваться
+					</button>
+
+					<button class="btn btn--outline header__btn" type="button" data-modal="#modalSignIn">
+						<i class="btn__icon fas fa-sign-in-alt"></i>
+
+						Войти
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+<main class="main">
+  <div class="container">
+    <button class="btn" type="button" disabled>
+      Middle - Primary
+    </button>
+    gdgfg
+    <br>
+    <a href="#" class="btn">
+      Middle - Primary
+    </a>
+    <br>
+    <br>
+    <button class="btn btn--outline" type="button">
+      <i class="btn__icon fas fa-arrow-left"></i>
+      Middle - Primary
+    </button>
+
+    <br>
+    <br>
+    <button class="btn btn--onlyicon" type="button">
+      <i class="btn__icon fas fa-arrow-left"></i>
+    </button>
+    <br>
+    <br>
+    <button class="btn btn--small btn--onlyicon" type="button">
+      <i class="btn__icon fas fa-arrow-left"></i>
+    </button>
+
+    <br>
+
+    <br>
+
+    <div class="custom__checkbox__item">
+      <input type="radio" class="custom__checkbox custom__checkbox--radio" id="radio2" name="radio" checked>
+      <label class="custom__label" for="radio2">Radio</label>
+    </div>
+
+    <div class="custom__checkbox__item">
+      <input type="radio" class="custom__checkbox custom__checkbox--radio" id="radio" name="radio">
+      <label class="custom__label" for="radio">Radio</label>
+    </div>
+
+    <input type="checkbox" class="custom__checkbox" id="happy" name="happy" value="yes">
+    <label class="custom__label" for="happy">Happy</label>
+
+    <br>
+
+    <br>
+
+    <input class="custom__input" type="text" id="" name="" placeholder="Text only" required>
+
+    <div class="custom__input__item">
+      <div class="custom__input__title">
+        Text only
+      </div>
+      <input class="custom__input custom__input--small" type="text" id="" name="" placeholder="Text only" required>
+    </div>
+
+    <div class="custom__select__item">
+      <select class="custom__select js-example-basic-single" name="select" id="select" style="width: 100%;">
+        <option value="AL">Alabama</option>
+        <option value="WY">Wyoming</option>
+      </select>
+    </div>
+
+    <div class="custom__select__item custom__select__item--small">
+      <select class="custom__select js-example-basic-single" name="select2" id="select2" style="width: 100%;">
+        <option value="AL">Alabama</option>
+        <option value="WY">Wyoming</option>
+      </select>
+    </div>
+
+
+  </div>
+
+
+</main>
+
+<footer class="footer" id="footer">
+	<div class="container container--fluid">
+		<div class="footer__inner">
+			<div class="footer__copyright">
+				© PhoneMonitoring 2021г
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="mask"></div>
+
+<div class="modal" id="modalRegistration">
+	<div class="modal__wrapper">
+		<div class="modal__head">
+			<div class="modal__title">
+				Регистрация
+			</div>
+
+			<button type="button" class="modal__close">
+				<i class="fas fa-times"></i>
+			</button>
+		</div>
+
+		<div class="modal__body">
+			<form action="/" id="registrationForm" name="registrationForm" class="registration__form form">
+				<div class="registration__input__list">
+					<div class="custom__input__item registration__input__item">
+						<input class="custom__input registration__input" type="email" id="email2" name="email2" placeholder="Email"
+							required>
+					</div>
+
+					<div class="custom__input__item registration__input__item">
+						<input class="custom__input registration__input" type="password" id="password2" name="password2"
+							placeholder="Пароль" required>
+					</div>
+
+					<div class="custom__input__item registration__input__item">
+						<input class="custom__input registration__input" type="password" id="password3" name="password3"
+							placeholder="Повторите пароль" required>
+					</div>
+				</div>
+
+				<button class="btn registration__submit" type="submit">
+					Зарегистрироваться
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="modalSignIn">
+	<div class="modal__wrapper">
+		<div class="modal__head">
+			<div class="modal__title">
+				Войти
+			</div>
+
+			<button type="button" class="modal__close">
+				<i class="fas fa-times"></i>
+			</button>
+		</div>
+
+		<div class="modal__body">
+			<form action="/" id="signInForm" name="signInForm" class="registration__form form">
+				<div class="registration__input__list">
+					<div class="custom__input__item registration__input__item">
+						<input class="custom__input registration__input" type="email" id="email3" name="email3" placeholder="Email"
+							required>
+					</div>
+
+					<div class="custom__input__item registration__input__item">
+						<input class="custom__input registration__input" type="password" id="password4" name="password4"
+							placeholder="Пароль" required>
+					</div>
+				</div>
+
+				<div class="registration__wrapper">
+					<button class="btn registration__submit" type="submit">
+						Войти
+					</button>
+
+					<a href="#" class="modal__link">
+						Напомнить пароль
+					</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script src="js/include/jquery.min.js"></script>
+<script src="js/include/select2.min.js"></script>
+<script src="js/include/jquery.maskedinput.min.js"></script>
+<script src="js/app.min.js"></script>
+
+</body>
+
+</html>
