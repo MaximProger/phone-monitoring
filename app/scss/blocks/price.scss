@@ -1,0 +1,28 @@
+.price {
+  padding-bottom: 113px;
+}
+
+.price__inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.price__content {
+  max-width: 347px;
+  width: 100%;
+}
+
+.price__wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.price__box {
+  width: 250px;
+  height: 172px;
+
+  background: #e1e4eb;
+}

@@ -15,6 +15,10 @@
 		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="css/include/all.min.css">
+	<link rel="stylesheet" href="css/include/select2.min.css">
+
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
@@ -22,9 +26,39 @@
 <body>
 
 	<header class="header" id="header">
-		<div class="container">
+		<div class="container container--fluid">
 			<div class="header__inner">
+				<a href="/" class="logo">
+					<img class="logo__img" width="203" height="32" src="images/dist/logo.svg" alt="img" loading="lazy">
+				</a>
 
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="service.html" class="nav__link">
+								О сервисе
+							</a>
+						</li>
+
+						<li class="nav__item">
+							<a href="agreement.html" class="nav__link">
+								Лицензионное соглашение
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="btn__wrapper header__btn__wrapper">
+					<button class="btn header__btn" type="button" data-modal="#modalRegistration">
+						Зарегистрироваться
+					</button>
+
+					<button class="btn btn--outline header__btn" type="button" data-modal="#modalSignIn">
+						<i class="btn__icon fas fa-sign-in-alt"></i>
+
+						Войти
+					</button>
+				</div>
 			</div>
 		</div>
 	</header>

@@ -1,9 +1,16 @@
 // USER VARIABLES SECTION
-$fontsize: 16px; // Body Font Size
-$textcolor: #000; // Text Color
-$lineheight: 1.65; // Document Line Height
-$userfont: Roboto, sans-serif; // User Font Family
+$fontsize: 14px; // Body Font Size
+$textcolor: #181d22; // Text Color
+$lineheight: 130%; // Document Line Height
+$userfont: Inter, sans-serif; // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+$black: #000;
+$blue: #357aff;
+$green: #77e09b;
+$yellow: #e7eb00;
+$orange: #ffa564;
+$red: #f57676;
 
 // Breakpoints
 $tablet: 1199px;
@@ -21,6 +28,6 @@ $mobile-sm: 374px;
   }
 }
 
-@include font("Roboto", normal, 400, "../fonts/roboto-regular-webfont.woff2");
-@include font("Roboto", italic, 400, "../fonts/roboto-italic-webfont.woff2");
-@include font("Roboto", normal, 700, "../fonts/roboto-bold-webfont.woff2");
+@include font("Inter", normal, 400, "../fonts/Inter-Regular.woff2");
+@include font("Inter", normal, 400, "../fonts/Inter-Medium.woff2");
+@include font("Inter", normal, 600, "../fonts/Inter-Bold.woff2");

@@ -1,0 +1,23 @@
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.nav__link {
+  font-size: 12px;
+  line-height: 15px;
+
+  display: inline-block;
+
+  text-decoration: none;
+  transition: all 0.2s linear;
+
+  color: $black;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-color: $black;
+  }
+}

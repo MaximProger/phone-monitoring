@@ -1,0 +1,82 @@
+<!--#set var="title" value="Главная" -->
+<!--#include virtual="/parts/header.html" -->
+
+<main class="main">
+  <section class="service section">
+    <div class="container">
+      <div class="service__inner">
+        <picture decoding="async">
+          <source type="image/webp" srcset="images/dist/intro.webp">
+          <img class="service__img" width="333" height="333" src="images/dist/intro.png" alt="img" loading="lazy">
+        </picture>
+
+        <div class="service__content">
+          <h1 class="service__title title">
+            О сервисе
+          </h1>
+          <p class="service__description description">
+            Семантический разбор внешних противодействий представляет собой интересный эксперимент проверки позиций,
+            занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же экономическая
+            повестка сегодняшнего дня выявляет срочную потребность новых предложений.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="price section">
+    <div class="container">
+      <div class="price__inner">
+        <div class="price__content">
+          <h2 class="price__title title">
+            Стоимость
+          </h2>
+          <p class="price__description description">
+            Семантический разбор внешних противодействий представляет собой интересный эксперимент проверки позиций,
+            занимаемых участниками в отношении поставленных задач.
+          </p>
+        </div>
+
+        <div class="price__wrapper">
+          <div class="price__box"></div>
+          <div class="price__box"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ask section">
+    <div class="container">
+      <div class="ask__inner">
+        <h2 class="title title--h2 ask__title">
+          Задать вопрос
+        </h2>
+
+        <form action="/" id="askForm" name="askForm" class="ask__form form">
+          <div class="ask__line">
+            <div class="custom__input__item ask__input__item">
+              <input class="custom__input ask__input" type="text" id="name" name="name" placeholder="Имя" required>
+            </div>
+
+            <div class="custom__input__item ask__input__item">
+              <input class="custom__input ask__input" type="tel" id="phone" name="phone" placeholder="Телефон" required>
+            </div>
+
+            <div class="custom__input__item ask__input__item">
+              <input class="custom__input ask__input" type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+          </div>
+
+          <textarea class="custom__input custom__input--textarea ask__textarea" name="question" id="question"
+            placeholder="Задайте свой вопрос" required></textarea>
+
+          <button class="btn ask__submit" type="submit">
+            Отправить вопрос
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!--#include virtual="/parts/footer.html" -->

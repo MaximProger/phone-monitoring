@@ -1,0 +1,15 @@
+.service {
+  padding-top: 46px;
+  padding-bottom: 68px;
+}
+
+.service__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service__content {
+  max-width: 520px;
+  width: 100%;
+}
