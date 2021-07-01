@@ -133,6 +133,10 @@ body {
   }
 }
 
+.btn__icon {
+  transition: all 0.2s linear;
+}
+
 .custom__checkbox {
   position: absolute;
   z-index: -1;
@@ -419,33 +423,6 @@ body {
   letter-spacing: 0.01em;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin-top: 20px;
-  font-size: 16px;
-  line-height: 20px;
-}
-table td {
-  padding: 0;
-  border: 1px solid #c8cccf;
-}
-table td img {
-  width: 100%;
-  height: 20px;
-}
-tr.timeline-hour {
-  text-align: center;
-  vertical-align: center;
-}
-tr.timeline-title {
-}
-tr.timeline-images td:nth-child(1) {
-  min-width: 50px;
-  text-align: center;
-}
-
 .mask {
   position: fixed;
   top: 0;
@@ -460,6 +437,19 @@ tr.timeline-images td:nth-child(1) {
   height: 100%;
 
   background: rgba(18, 42, 87, 0.27);
+}
+
+tr:first-child td:first-child {
+  border-top-left-radius: 10px;
+}
+tr:first-child td:last-child {
+  border-top-right-radius: 10px;
+}
+tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
 }
 
 @media (max-width: $tablet) {

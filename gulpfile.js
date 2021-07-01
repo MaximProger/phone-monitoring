@@ -129,10 +129,12 @@ gulp.task("otf2ttf", function () {
 function buildcopy() {
   return src(
     [
-      "{app/js,app/css}/*.min.*",
+      // "{app/js,app/css}/*.min.*",
+      "app/js/**/*",
+      "app/css/**/*",
       "app/images/**/*.*",
       "!app/images/src/**/*",
-      "app/fonts/**/*",
+      "app/fonts/**/*.woff2",
     ],
     { base: "app/" }
   ).pipe(dest("dist"));
