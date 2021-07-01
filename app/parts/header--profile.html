@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+  <!-- <base href="/"> -->
+
+  <title>
+    <!--#echo var="title" -->
+  </title>
+  <meta name="description" content="Startup HTML">
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="icon" href="images/favicon.png">
+
+  <link rel="stylesheet" href="css/include/all.min.css">
+  <link rel="stylesheet" href="css/include/select2.min.css">
+
+  <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+  <header class="header" id="header">
+    <div class="container container--fluid">
+      <div class="header__inner">
+        <a href="/" class="logo">
+          <img class="logo__img" width="203" height="32" src="images/dist/logo.svg" alt="img" loading="lazy">
+        </a>
+
+        <div class="header__info">
+          <div class="header__profile">
+            <a href="#" class="header__profile__link">
+              <i class="header__profile__icon far fa-user"></i>
+              <span class="header__profile__text">
+                Мой профиль
+              </span>
+            </a>
+          </div>
+
+          <div class="header__balance">
+            <div class="header__balance__value">
+              1 768 ₽
+            </div>
+
+            <div class="header__balance__text">
+              хватит на 7 дней
+            </div>
+          </div>
+
+          <button class="btn header__btn" type="button" data-modal="#modalTopUp">
+            Пополнить
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>

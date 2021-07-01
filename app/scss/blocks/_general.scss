@@ -13,6 +13,10 @@ body {
   background: #f8f9fb;
 }
 
+.main {
+  min-height: calc(100vh - 82px - 86px);
+}
+
 .container {
   max-width: 930px;
   width: 100%;

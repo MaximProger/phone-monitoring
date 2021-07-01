@@ -1,0 +1,45 @@
+<!--#set var="title" value="Профиль" -->
+<!--#include virtual="/parts/header--profile.html" -->
+
+<main class="main">
+  <section class="profile section">
+    <div class="container container--large">
+      <div class="profile__inner">
+        <div class="profile__head">
+          <div class="profile__title__wrapper">
+            <h1 class="profile__title title">
+              Мой профиль
+            </h1>
+
+            <a href="#" class="profile__logout">
+              <span></span>
+            </a>
+          </div>
+
+          <div class="profile__head__wrapper">
+            <button class="btn btn--outline profile__head__btn" type="button" data-modal="#modalAddNumber">
+              <i class="btn__icon fas fa-plus"></i>
+              Добавить номер
+            </button>
+          </div>
+        </div>
+
+        <div class="profile__tabs">
+          <a href="profile__numbers.html" class="profile__tabs__item profile__tabs__item--active">
+            Номера
+          </a>
+
+          <a href="profile__balane.html" class="profile__tabs__item">
+            Пополнить баланс
+          </a>
+
+          <a href="profile__settings.html" class="profile__tabs__item">
+            Настройки
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!--#include virtual="/parts/footer--profile.html" -->
