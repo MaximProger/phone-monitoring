@@ -1,0 +1,84 @@
+<!--#set var="title" value="Профиль" -->
+<!--#include virtual="/parts/header--profile.html" -->
+
+<main class="main">
+  <section class="profile section">
+    <div class="container container--large">
+      <div class="profile__inner">
+        <div class="profile__head">
+          <div class="profile__title__wrapper">
+            <h1 class="profile__title title">
+              Мой профиль
+            </h1>
+
+            <a href="#" class="profile__logout">
+              <span></span>
+            </a>
+          </div>
+
+          <div class="profile__head__wrapper">
+            <button class="btn btn--outline profile__head__btn" type="button" data-modal="#modalAddNumber">
+              <i class="btn__icon fas fa-plus"></i>
+              Добавить номер
+            </button>
+          </div>
+        </div>
+
+        <div class="profile__tabs">
+          <a href="profile__numbers.html" class="profile__tabs__item">
+            Номера
+          </a>
+
+          <a href="profile__balance.html" class="profile__tabs__item">
+            Пополнить баланс
+          </a>
+
+          <a href="profile__settings.html" class="profile__tabs__item profile__tabs__item--active">
+            Настройки
+          </a>
+        </div>
+
+        <div class="profile__settings">
+          <form action="/" id="profileSettingsForm" name="profileSettingsForm" class="profile__settings form">
+            <div class="profile__settings__wrapper">
+              <h3 class="profile__settings__title title title--h3">
+                Часовой пояс
+              </h3>
+
+              <div class="custom__select__item profile__settings__select">
+                <select class="custom__select js-example-basic-single" name="timezone" id="timezone">
+                  <option value="4">+ 4 GSM</option>
+                  <option value="3">+ 3 GSM</option>
+                  <option value="2">+ 2 GSM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="profile__settings__wrapper">
+              <h3 class="profile__settings__title title title--h3">
+                Сменить пароль
+              </h3>
+
+              <div class="profile__settings__list">
+                <input class="custom__input profile__settings__input" type="password" id="password" name="password"
+                  placeholder="Текущий пароль" required>
+
+                <input class="custom__input profile__settings__input" type="password" id="password2" name="password2"
+                  placeholder="Новый пароль" required>
+              </div>
+
+            </div>
+
+
+            <button type="submit" class="btn profile__settings__submit">
+              Сохранить
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<!--#include virtual="/parts/footer--profile.html" -->

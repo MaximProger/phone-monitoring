@@ -1,0 +1,66 @@
+.sidebar {
+  width: 18.5%;
+  padding: 43px 40px;
+
+  background: #ffffff;
+  box-shadow: 1px 0px 0px rgba(159, 171, 180, 0.25);
+}
+
+.sidebar__back {
+  margin-bottom: 61px;
+}
+
+.sidebar__year {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.custom__input__title {
+  font-size: 14px;
+  line-height: 120%;
+
+  margin-bottom: 0;
+}
+
+.sidebar__select__item {
+  width: 151px;
+}
+
+.sidebar__select__item
+  .select2-container
+  .select2-selection--single
+  .select2-selection__rendered {
+  font-weight: bold;
+}
+
+.sidebar__item {
+  padding: 12px;
+
+  margin-bottom: 4px;
+
+  border: 1px solid #e2e6e9;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.sidebar__checkbox + .sidebar__label {
+  align-items: flex-start;
+}
+
+.sidebar__sublabel {
+  font-size: 12px;
+  line-height: 15px;
+
+  display: block;
+
+  margin-top: 2px;
+
+  color: #808891;
+}
+
+.sidebar__export {
+  width: 100%;
+}

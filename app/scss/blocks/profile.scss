@@ -98,3 +98,165 @@
     }
   }
 }
+
+.profile__numbers__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+}
+
+.profile__numbers__count {
+  font-size: 14px;
+  line-height: 120%;
+
+  color: #767e85;
+
+  span {
+    font-weight: 600;
+
+    color: #202325;
+  }
+}
+
+.profile__numbers__sort {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .custom__input__title {
+    font-size: 14px;
+    line-height: 120%;
+
+    margin-bottom: 0;
+    margin-right: 8px;
+  }
+}
+
+.profile__numbers__select {
+  width: 155px;
+}
+
+.profile__numbers__item {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.profile__balance {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.profile__balance__box {
+  width: 489px;
+  height: 497px;
+
+  background: #e1e4eb;
+  border-radius: 10px;
+}
+
+.profile__balance__col {
+  width: 555px;
+}
+
+.profile__balance__title {
+  margin-bottom: 20px;
+}
+
+.profile__balance__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 69px;
+  padding: 0 32px;
+  margin-bottom: 8px;
+
+  transition: all 0.2s linear;
+
+  background: #ffffff;
+  box-shadow: 0px 9px 13px rgba(7, 66, 108, 0.05);
+  border-radius: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    background: darken($color: #fff, $amount: 3);
+    box-shadow: 0px 9px 13px rgba(7, 66, 108, 0.1);
+  }
+}
+
+.profile__balance__info__text {
+  font-size: 12px;
+  line-height: 15px;
+
+  margin-bottom: 3px;
+
+  color: #808891;
+}
+
+.profile__balance__info__value {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: $black;
+}
+
+.profile__balance__bill {
+  font-size: 14px;
+  line-height: 120%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  text-decoration: none;
+
+  color: $black;
+
+  &:hover {
+    .profile__balance__bill__text {
+      border-color: $black;
+    }
+  }
+}
+
+.profile__balance__bill__icom {
+  margin-right: 8px;
+}
+
+.profile__balance__bill__text {
+  display: inline-block;
+
+  transition: all 0.2s linear;
+
+  border-bottom: 1px solid transparent;
+}
+
+.profile__settings {
+  width: 300px;
+}
+
+.profile__settings__wrapper {
+  margin-bottom: 41px;
+}
+
+.profile__settings__title {
+  margin-bottom: 23px;
+}
+
+.profile__settings__input {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -61,4 +61,22 @@ $(document).ready(function () {
     const modalId = $(this).data("modal");
     openModal(modalId);
   });
+
+  // Копирование текста в буффер обмена
+  function copytext(el) {
+    var $tmp = $("<textarea>");
+    $("body").append($tmp);
+    $tmp.val($(el).text()).select();
+    document.execCommand("copy");
+    $tmp.remove();
+  }
+
+  $(".info__pannel__copy").click(function (evt) {
+    evt.preventDefault();
+
+    const phoneValue = $(this)
+      .parent(".info__pannel__phone")
+      .find(".info__pannel__phone__value");
+    copytext(phoneValue);
+  });
 });

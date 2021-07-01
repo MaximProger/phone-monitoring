@@ -1,0 +1,55 @@
+.stats {
+  width: 81.5%;
+  padding-bottom: 65px;
+
+  .container {
+    max-width: 1126px;
+  }
+}
+
+.stats__header {
+  padding: 39px 0;
+
+  .info__pannel__phone {
+    margin-right: 57px;
+  }
+
+  .info__pannel__copy {
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  .info__pannel__phone__value {
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  .info__pannel__description {
+    max-width: 266px;
+    margin-right: 0;
+  }
+}
+
+.stats__numbers__item {
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .info__wrapper {
+    padding: 0;
+
+    background: none;
+  }
+}
+
+.stats__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+
+  margin-bottom: 12px;
+
+  color: $blue;
+}
