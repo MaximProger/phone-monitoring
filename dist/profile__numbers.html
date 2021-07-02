@@ -18,6 +18,7 @@
   <link rel="icon" href="images/favicon.png">
 
   <link rel="stylesheet" href="css/include/all.min.css">
+  <link rel="stylesheet" href="css/include/bootstrap-grid.min.css">
   <link rel="stylesheet" href="css/include/select2.min.css">
 
   <link rel="stylesheet" href="css/main.min.css">
@@ -161,7 +162,7 @@
                   </div>
 
                   <div class="info__pannel__options">
-                    <a href="#" class="info__pannel__link">
+                    <a href="#" class="info__pannel__link modalEdit">
                       <i class="info__pannel__link__icon fas fa-cog"></i>
                       <span class="info__pannel__link__text">
                         Настройки
@@ -230,33 +231,6 @@
                       <td><img
                           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAABQCAMAAADY1CJEAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABTVBMVEX/qiv/rTb+skX+sUX+sEX+r0X9rkX9rUT9rET9q0T8q0T8qkT8qUT8qET8p0T7p0T7pkT7pUT7pET6pET6o0T6okT6oUT6oEP5oEP5n0P5nkP5nUP5nEP4nEP4m0P4mkP4mUP3mEP3l0P3lkP3lUP2lUP2lEP2k0L2kkL1kUL1kEL1j0L1jkL0jkL0jUL0jEL0i0L0ikLzikLziULziELzh0LyhkHyhUHyhEHyg0Hxg0HxgkHxgUHxgEHxf0Hwf0HwfkHwfUHwfEHve0HvekHveUDveEDueEDud0DudkDudUDudEDtdEDtc0DtckDtcUDscUDscEDsb0DsbkDsbUDrbUDrbD/raz/raj/raT/qaT/qaD/qZz/qZj/pZj/pZT/pZD/pYz/pYj/oYj/oYT/oYD/oXz7nXj7nXT7nXD7nWz7mWz7eQiPZNBT////myoKsAAAAAWJLR0RuIg9RFwAAA2FJREFUeNrt1FmfFwIYBtAsYWyTEWUZJcY6pEILNRXGNoxSYhhStgbf/9b7v+/n9nkuzvkQZ98+uKt77r1v3D/2jwfGg+OhsbS09PAj49Hx2Hh8eXn5wHhiYWVl5cmD46nx9Dh06PDhZ8az47nx/Orq6gvjyDg6XhzHxksLL6+trb0yXh2vjdfHG+PNsb6+/tbb4/h4Z5w4cfLkqfHueG/h/XF6nBlnz54798H4cJwfFzY2Ni6OS+Py+Gh8PD4Zm5ubn3628Pn4Yny5tbX11fh6bG9vf3NlXB3fjmvXrl//btwY348fdnZ2flz4aezu7v78y7g5fh23bt2+/dv4ffwx/hx/jTtjb2/v73/+hf+VXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0aekFqCVoQZOWXoBaghY0af8BWnY84c7VVicAAAAASUVORK5CYII=">
                       </td>
-                      <td><img
-                          src="data:image/png;base64,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">
-                      </td>
-                      <td><img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAABQCAMAAADY1CJEAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABO1BMVEXO5hnR6Cfg8GzP5h3e8Gvd8Gvc8Gvb8Gra8Gra72rZ72rY72nX72nW72nV72jU72jT72jS72fR72fQ72fP72bO7mbN7mbM7mXL7mXK7mXJ7mTI7mTH7mTG7mPF7mPE7mPD7mLD7WLC7WLB7WLA7WG/7WG+7WG97WC87WC77WC67V+57V+47V+37V637F627F617F607F2z7F2y7F2x7Fyw7Fyv7Fyu7Fut7Fus7Fus61ur61qq61qp61qo61mn61mm61ml61ik61ij61ii61eh61eg61eg6lef6lae6lad6lac6lWb6lWa6lWZ6lSY6lSX6lSW6lOV6lOU6VOT6VKS6VKR6VKQ6VGP6VGO6VGN6VCM6VCL6VCK6U+J6U+J6E+I6E+H6E6G6E6F6E5T0Q9/5kiD6E1l2Sb////J4gv4AAAAAWJLR0Roy2z0IgAAA7FJREFUeNrt1GmfEGIYxeFS1ISKSLaMfSfZt5BlUKbIvkxpLN//GzjP+3kbt871/wj3uX/Xvn03bftv0Q3twJ5nP3jw1nRbOpQOb2xsHEm3pzvSnauj6Vg6nu5Kd6cT6Z50bzqZ7kunVvenB9KD6aH0cDqdHkmbm5uPPpYeXz2RnkxPpafTM+nZ9Fx6Pr2QXnwpvZzOpFfS2fRqei29nt5Ib6a30tvpnXfTe+n9dC59kD5MH6Xz6eP0yerT9NnW1tbn6Yv0ZbqQLqav0na6tLqcvk7fpCvp2/Rd+j79kH5MP6WfV7+kX9NvaWdn5+q19Hu6nnZ3d//Yoz//0r/XHgP8vcZZI62xrma1NV42XFuuTde4a+Q19hp9jb+eIL+wfmL9xvqR9Svb2/+1ooD+/wZoQNcHaEBPDdCArg/QgJ4aoAFdH6ABPTVAA7o+QAN6aoAGdH2ABvTUAA3o+gAN6KkBGtD1ARrQUwM0oOsDNKCnBmhA1wdoQE8N0ICuD9CAnhqgAV0foAE9NUADuj5AA3pqgAZ0fYAG9NQADej6AA3oqQEa0PUBGtBTAzSg6wM0oKcGaEDXB2hATw3QgK4P0ICeGqABXR+gAT01QAO6PkADemqABnR9gAb01AAN6PoADeipARrQ9QEa0FMDNKDrAzSgpwZoQNcHaEBPDdCArg/QgJ4aoAFdH6ABPTVAA7o+QAN6aoAGdH2ABvTUAA3o+gAN6KkBGtD1ARrQUwM0oOsDNKCnBmhA1wdoQE8N0ICuD9CAnhqgAV0foAE9NUADuj5AA3pqgAZ0fYAG9NQADej6AA3oqQEa0PUBGtBTAzSg6wM0oKcGaEDXB2hATw3QgK4P0ICeGqABXR+gAT01QAO6PkADemqABnR9gAb01AAN6PoADeipARrQ9QEa0FMDNKDrAzSgpwZoQNcHaEBPDdCArg/QgJ4aoAFdH6ABPTVAA7o+QAN6aoAGdH2ABvTUAA3o+gAN6KkBGtD1ARrQUwM0oOsDNKCnBmhA1wdoQE8N0ICuD9CAnhqgAV0foAE9NUADuj5AA3pqgAZ0fYAG9NQADej6AA3oqQEa0PUBGtBTAzSg6wM0oKcGaEDXB2hATw3QgK4P0ICeGqABXR+gAT01QAO6PkADemqABnR9gAb01AAN6PoADeipARrQ9QEa0FMDNKDrAzSgpwZoQNcHaEBPDdCArg/QgJ4aoAFdH6ABPTVAA7o+QAN6aoAGdH2ABvTUAA3o+gAN6KkBGtD13Wig/wG+UYAfBE29aQAAAABJRU5ErkJggg==">
-                      </td>
-                      <td><img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAABQCAYAAADvCtJ2AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAD50lEQVR42u3YsWoUURiG4TOChRZR0Eaw1MqrEbw5b8XOys5KELwDtRMFQdnfIkZmdrO7c2bmw6DPU2Xdf07OyQmJeYeXn15U+21oQxubvpq+7pmdzA+d88m9zJ0fjs+vXnvD+Z59b72XzdYeOueTe5k7P3TMpvcyd3ZYtvZu97V9+f6qZQzt/t3nrfb+9fB1Hb5fnfO966985ux8dc53rr/FuY/OV+f8TTtDdc53rL/FuU/OV3j99Bmqc/4mnaE65zvX3+LcJ+dr/fpvP75uW3l88bQ9vPNos/UAaO3n7kd79/nNJms9uXjW7t1+cPmi6vLvhNEvhuHq4xr9DVF7743fv3pvvM6fZ+vaZ8efY//ZU5/jcH91dJ39/S87Z808Z1t4zpqus/k91OyvwbJ7qFVfg/N3NP3P/fb3UJ3fb733UNc+u9091Oz9LbuHWrW/s3d05OfDmnuY7rUW/0yYd86azu2qffvwvv0vbv3tDQAAAAAA8G8SoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIgQoAEAAAAAiBCgAQAAAACIEKABAAAAAIj4BbanK890oFQSAAAAAElFTkSuQmCC">
-                      </td>
-                      <td><img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAABQCAMAAADY1CJEAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEXZNBTdQyPjXT7jXj7jXj/iXj/iXz/hYD/hYT/gYT/gYj/fYz/eZD/eZT/dZT/dZj/dZz/cZz/cZ0DcaEDbaUDaakDaa0DZa0DZbEDYbUD///8h8m8ZAAAAAWJLR0QadWfkMgAAAWVJREFUeNrt1MtVwgAAAEFAJJqA/BIJ/TdqDV5032Omgj3tZgPA39nudm/798NhGIaPz3Ecp2k6Hk+nr/P5cr3d7/M8L8vy/VjX9fnfqQCvxaABogwaIMqgAaIMGiDKoAGiDBogyqABogwaIMqgAaIMGiDKoAGiDBogyqABogwaIMqgAaIMGiDKoAGiDBogyqABogwaIMqgAaIMGiDKoAGiDBogyqABogwaIMqgAaIMGiDKoAGiDBogyqABogwaIMqgAaIMGiDKoAGiDBogyqABogwaIMqgAaIMGiDKoAGiDBogyqABogwaIMqgAaIMGiDKoAGiDBogyqABogwaIMqgAaIMGiDKoAGiDBogyqABogwaIMqgAaIMGiDKoAGiDBogyqABogwaIMqgAaIMGiDKoAGiDBogyqABogwaIMqgAaIMGiDKoAGiDBogyqABogwaIMqgAaIMGiDKoAGiDBog6heD/gF2WrShRLTLrgAAAABJRU5ErkJggg==">
-                      </td>
-                      <td><img
-                          src="data:image/png;base64,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">
-                      </td>
-                      <td><img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAABQCAMAAADY1CJEAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABR1BMVEXZNBTmWDvnWz7nXD7nXT7nXj7oXz7oYD/oYT/oYj/pYj/pYz/pZD/pZT/pZj/qZj/qZz/qaD/qaT/raj/raz/rbD/rbUDsbUDsbkDsb0DscEDtcUDtckDtc0DtdEDudEDudUDudkDud0DueEDveEDveUDvekHve0HvfEHwfEHwfUHwfkHwf0Hxf0HxgEHxgUHxgkHxg0Hyg0HyhEHyhUHyhkHzh0LziELziULzikL0ikL0i0L0jEL0jUL0jkL1jkL1j0L1kEL1kUL2kUL2kkL2k0L2lEP2lUP3lUP3lkP3l0P3mEP3mUP4mUP4mkP4m0P4nEP5nUP5nkP5n0P5oEP6oEP6oUT6okT6o0T7pET7pUT7pkT7p0T8p0T8qET8qUT8qkT8q0T9q0T9rET9rUT9rkX+r0X+sEX+sUX+skX/rTT/qiv///8rNuC7AAAAAWJLR0RszAEwOwAAA3tJREFUeNrt1Gt/EAIYh+GcbWE5rZwmHWTZyBznUFkoahEtyorKaXz/9559hOfVn99zXd/hvg8cgP+VBx58qDxcHimPlsfK42VhYXHxYHmiPFmeWlpaOlSeLs+UZ8tz+54vy8uHDx8pL5QXy0vl5fJKWVlZefVoea0cK8ePnzhxsrxeTpU3VldXT+97s6ytra+/Vd4uZ8o7Gxsb75b3yvvlg/Jh+ahsbm5+/En5tHxWzp49d+58+Xzf1tbWhS/Kl+WrcvHipUtfl2/K5XJle3v7avm2fFeule/LD+X69Z2dG+XHfT+Vm+VW+bns7u7evlN+Kb+Wu3fv3btffiu/lz/Kn+Wvsre39/c//Geka4MmgzboOdK1QZNBG/Qc6dqgyaANeo50bdBk0AY9R7o2aDJog54jXRs0GbRBz5GuDZoM2qDnSNcGTQZt0HOka4MmgzboOdK1QZNBG/Qc6dqgyaANeo50bdBk0AY9R7o2aDJog54jXRs0GbRBz5GuDZoM2qDnSNcGTQZt0HOka4MmgzboOdK1QZNBG/Qc6dqgyaANeo50bdBk0AY9R7o2aDJog54jXRs0GbRBz5GuDZoM2qDnSNcGTQZt0HOka4MmgzboOdK1QZNBG/Qc6dqgyaANeo50bdBk0AY9R7o2aDJog54jXRs0GbRBz5GuDZoM2qDnSNcGTQZt0HOka4MmgzboOdK1QZNBG/Qc6dqgyaANeo50bdBk0AY9R7o2aDJog54jXRs0GbRBz5GuDZoM2qDnSNcGTQZt0HOka4MmgzboOdK1QZNBG/Qc6dqgyaANeo50bdBk0AY9R7o2aDJog54jXRs0GbRBz5GuDZoM2qDnSNcGTQZt0HOka4MmgzboOdK1QZNBG/Qc6dqgyaANeo50bdBk0AY9R7o2aDJog54jXRs0GbRBz5GuDZoM2qDnSNcGTQZt0HOka4MmgzboOdK1QZNBG/Qc6dqgyaANeo50bdBk0AY9R7o2aDJog54jXRs0GbRBz5GuDZoM2qDnSNcGTQZt0HOka4MmgzboOdK1QZNBG/Qc6dqgyaANeo50bdBk0AY9R7o2aDJog54jXRs0GbRBz5GuDZoM2qDnSNcGTQZt0HOka4MmgzboOdK1QZNBG/Qc6dqgyaANeo50bdBk0AY9R7o2aDJog54jXRs0GbRBz5GuDZoM2qDn+Bf5t/w3ti7ghgAAAABJRU5ErkJggg==">
-                      </td>
-                      <td><img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAABQCAYAAADvCtJ2AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAADOklEQVR42u3YMU4bQRiA0RlSQAcSR6CEk6fjFPQ5Rwo6ChQ2TVAQtjAL/mzJeq9az/7eGa22+uby83YZAMBJWX6cj5eL67HMN2vj3fXctv5vcW6Zf71e/cyx8cxd99fvOYNnFuf0vr1v7/vU3/fzy/P49fth7MPN1d24PL8e89365u+5eX9+fn77zCf2COfHPP6ZvrXHXDl/iDOtmf/g+9nbHnuc31ibR/hm97nHXDl/iDOtmZ9f+M8B53f+Z35zj+XPeHy6H8B/Z8c+AAAAAAAAp0mABgAAAAAgIUADAAAAAJAQoAEAAAAASAjQAAAAAAAkBGgAAAAAABICNAAAAAAACQEaAAAAAICEAA0AAAAAQEKABgAAAAAgIUADAAAAAJAQoAEAAAAASAjQAAAAAAAkBGgAAAAAABICNAAAAAAACQEaAAAAAICEAA0AAAAAQEKABgAAAAAgIUADAAAAAJAQoAEAAAAASAjQAAAAAAAkBGgAAAAAABICNAAAAAAACQEaAAAAAICEAA0AAAAAQEKABgAAAAAgIUADAAAAAJAQoAEAAAAASAjQAAAAAAAkBGgAAAAAABICNAAAAAAACQEaAAAAAICEAA0AAAAAQEKABgAAAAAgIUADAAAAAJAQoAEAAAAASAjQAAAAAAAkBGgAAAAAABICNAAAAAAACQEaAAAAAICEAA0AAAAAQEKABgAAAAAgIUADAAAAAJAQoAEAAAAASAjQAAAAAAAkBGgAAAAAABICNAAAAAAACQEaAAAAAICEAA0AAAAAQEKABgAAAAAgIUADAAAAAJAQoAEAAAAASAjQAAAAAAAkBGgAAAAAABICNAAAAAAACQEaAAAAAICEAA0AAAAAQEKABgAAAAAgIUADAAAAAJAQoAEAAAAASAjQAAAAAAAkBGgAAAAAABICNAAAAAAACQEaAAAAAICEAA0AAAAAQEKABgAAAAAgIUADAAAAAJAQoAEAAAAASAjQAAAAAAAkBGgAAAAAABICNAAAAAAACQEaAAAAAICEAA0AAAAAQEKABgAAAAAgIUADAAAAAJAQoAEAAAAASAjQAAAAAAAkBGgAAAAAABICNAAAAAAAib94BIZsJqsyCgAAAABJRU5ErkJggg==">
-                      </td>
-                      <td><img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAABQCAMAAADY1CJEAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABOFBMVEXO5hne8Gvd8Gvc8Gvb8Gra8Gra72rZ72rY72nX72nW72nV72jU72jT72jS72fR72fQ72fP72bO7mbN7mbM7mXL7mXK7mXJ7mTI7mTH7mTG7mPF7mPE7mPD7mLD7WLC7WLB7WLA7WG/7WG+7WG97WC87WC77WC67V+57V+47V+37V637F627F617F607F2z7F2y7F2x7Fyw7Fyv7Fyu7Fut7Fus7Fus61ur61qq61qp61qo61mn61mm61ml61ik61ij61ii61eh61eg61eg6lef6lae6lad6lac6lWb6lWa6lWZ6lSY6lSX6lSW6lOV6lOU6VOT6VKS6VKR6VKQ6VGP6VGO6VGN6VCM6VCL6VCK6U+J6U+J6E+I6E+H6E6G6E6F6E5w3zRT0Q+D6E1/5khy4Ddk2SX///8veMbuAAAAAWJLR0RnW9PpswAAA8VJREFUeNrt1NXSEAQUhVEwsLsD7MQO7AS7OzBQ0fd/BM8/+w5vzg2bGWetJ9izL75Dh86Xw4cvGhePS8alR44cuWxcPq4YV46rxtUHrhnXjuvG9eOGceO4adw8bhm3jtsO3D7uGHeOu8bd4+jRY8fuGfeO+8b944Hx4IGHxsPjkfHoeGw8fvz48SfGk+Op8fR45sCz47nx/HhhvDhOnDjx0svjlfHqeG28Pt448OZ4a7w93hnvjpMnT516b7w/Phgfjo/Gxwc+GZ+Oz8bn44vx5fhqfD2+Gd+O7w58P34YP46fxs/j9OnTv/w6fhu/jzNnzvzx57n+4nw4+5+jz17oSf9Tf5979D8XetGFcd76LNAC/f8j0C0CHQIt0KwJdItAh0ALNGsC3SLQIdACzZpAtwh0CLRAsybQLQIdAi3QrAl0i0CHQAs0awLdItAh0ALNmkC3CHQItECzJtAtAh0CLdCsCXSLQIdACzRrAt0i0CHQAs2aQLcIdAi0QLMm0C0CHQIt0KwJdItAh0ALNGsC3SLQIdACzZpAtwh0CLRAsybQLQIdAi3QrAl0i0CHQAs0awLdItAh0ALNmkC3CHQItECzJtAtAh0CLdCsCXSLQIdACzRrAt0i0CHQAs2aQLcIdAi0QLMm0C0CHQIt0KwJdItAh0ALNGsC3SLQIdACzZpAtwh0CLRAsybQLQIdAi3QrAl0i0CHQAs0awLdItAh0ALNmkC3CHQItECzJtAtAh0CLdCsCXSLQIdACzRrAt0i0CHQAs2aQLcIdAi0QLMm0C0CHQIt0KwJdItAh0ALNGsC3SLQIdACzZpAtwh0CLRAsybQLQIdAi3QrAl0i0CHQAs0awLdItAh0ALNmkC3CHQItECzJtAtAh0CLdCsCXSLQIdACzRrAt0i0CHQAs2aQLcIdAi0QLMm0C0CHQIt0KwJdItAh0ALNGsC3SLQIdACzZpAtwh0CLRAsybQLQIdAi3QrAl0i0CHQAs0awLdItAh0ALNmkC3CHQItECzJtAtAh0CLdCsCXSLQIdACzRrAt0i0CHQAs2aQLcIdAi0QLMm0C0CHQIt0KwJdItAh0ALNGsC3SLQIdACzZpAtwh0CLRAsybQLQIdAi3QrAl0i0CHQAs0awLdItAh0ALNmkC3CHQItECzJtAtAh0CLdCsCXSLQIdACzRrAt0i0CHQAs2aQLcIdAi0QLMm0C0CHQIt0KwJdItAh0ALNGsC3SLQIdACzZpAtwh0CLRAsybQLQIdAi3QrAl0i0CHQAs0awLdItDxLwsu3QXTobk+AAAAAElFTkSuQmCC">
-                      </td>
-                      <td><img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAABQCAMAAADY1CJEAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABYlBMVEWD6E1T0Q9v3zR14Tt75EN95EWF6FCF6FGG6FGG6FKH6FOH6FSI6FSI6FWI6FaJ6FaJ6FeK6FeK51iK51mL51mL51qM51uM51yN51yN512O516O51+P51+P52CQ52GQ52KR52KR52OR52SS52SS52WT52aT52eU52eU52iV52mV52qW52qW52uW52yX52yX5m2Y5m2Y5m6Y5m+Z5m+Z5nCa5nCa5nGa5nKb5nKb5nOb5nSc5nSc5nWd5nWd5nad5nee5nee5nif5nif5nmf5nqg5nqg5nuh5nyh5n2i5n2i5n6j5n+j5oCk5oCk5oGk5oKl5YKl5YOm5YSm5YWn5YWn5Yao5Yeo5Yip5Yip5Ymq5Yqq5Yur5Yur5Yyr5Y2s5Y2s5Y6t5Y6t5Y+t5ZCu5ZCu5ZGv5ZKv5ZOw5ZOw5ZSw5ZWx5ZWx5Zay5Zay5Zey5Jey5Jiz5Jiz5Jm05Jm05Jr///9h7loRAAAAAWJLR0R1qGqY+wAAA39JREFUeNrt1N1SFgQYhVFLMzEJIjBBg1CwQMRIRBEjiKDkT0HBRBHDQhE1Je9/+o71VId596x1BXtmzzyHDsX65F2fHvQiPqz3Hj580Iv4oI689/BnR49+fuxYU1PT8YYvTpxobm7+sqWltbX1q7a2tq/b2zs6Ok42fHPqVGdnZ1dX1+nTZ75t6O7u7un5rre39+zZc+f6+vr6+/vPn//+h4aBgYHBwQtDQ0MXh4eHL136cWRk5KfLl0dHR6+MjY1dvXZtfHz8+sTExI0bP09OTv4yNTU9Pf3rzMzMb7Ozc3Nzvzf8cfPm/Pz8wsLC4uLS0vLy8q3bt1dWVlZXV+/cuXt3bW1tfX393r0/7zdsbGw8ePBwc3Pz0dbW1uPHf21vbz958vc/DTs7O0+fPtvd3X2+t7f34sXLV6/+ff3mzf7+/n9vD/qCj0ig0wl0OIEWaOoS6HACLdDUJdDhBFqgqUugwwm0QFOXQIcTaIGmLoEOJ9ACTV0CHU6gBZq6BDqcQAs0dQl0OIEWaOoS6HACLdDUJdDhBFqgqUugwwm0QFOXQIcTaIGmLoEOJ9ACTV0CHU6gBZq6BDqcQAs0dQl0OIEWaOoS6HACLdDUJdDhBFqgqUugwwm0QFOXQIcTaIGmLoEOJ9ACTV0CHU6gBZq6BDqcQAs0dQl0OIEWaOoS6HACLdDUJdDhBFqgqUugwwm0QFOXQIcTaIGmLoEOJ9ACTV0CHU6gBZq6BDqcQAs0dQl0OIEWaOoS6HACLdDUJdDhBFqgqUugwwm0QFOXQIcTaIGmLoEOJ9ACTV0CHU6gBZq6BDqcQAs0dQl0OIEWaOoS6HACLdDUJdDhBFqgqUugwwm0QFOXQIcTaIGmLoEOJ9ACTV0CHU6gBZq6BDqcQAs0dQl0OIEWaOoS6HACLdDUJdDhBFqgqUugwwm0QFOXQIcTaIGmLoEOJ9ACTV0CHU6gBZq6BDqcQAs0dQl0OIEWaOoS6HACLdDUJdDhBFqgqUugwwm0QFOXQIcTaIGmLoEOJ9ACTV0CHU6gBZq6BDqcQAs0dQl0OIEWaOoS6HACLdDUJdDhBFqgqUugwwm0QFOXQIcTaIGmLoEOJ9ACTV0CHU6gBZq6BDqcQAs0dQl0OIEWaOoS6HACLdDUJdDhBFqgqUugwwm0QFOXQIcTaIGmLoEOJ9ACTV0CHU6g3/4P3JSesNcy8tEAAAAASUVORK5CYII=">
-                      </td>
                     </tr>
 
                     <tr class="timeline-date">
@@ -276,15 +250,6 @@
                       <td>13</td>
                       <td>14</td>
                       <td>15</td>
-                      <td>16</td>
-                      <td>17</td>
-                      <td>18</td>
-                      <td>19</td>
-                      <td>20</td>
-                      <td>21</td>
-                      <td>22</td>
-                      <td>23</td>
-                      <td>24</td>
                     </tr>
                   </table>
                 </div>
@@ -327,7 +292,7 @@
                   </div>
 
                   <div class="info__pannel__options">
-                    <a href="#" class="info__pannel__link">
+                    <a href="#" class="info__pannel__link modalEdit">
                       <i class="info__pannel__link__icon fas fa-cog"></i>
                       <span class="info__pannel__link__text">
                         Настройки
@@ -493,7 +458,7 @@
                   </div>
 
                   <div class="info__pannel__options">
-                    <a href="#" class="info__pannel__link">
+                    <a href="#" class="info__pannel__link modalEdit">
                       <i class="info__pannel__link__icon fas fa-cog"></i>
                       <span class="info__pannel__link__text">
                         Настройки
@@ -659,7 +624,7 @@
                   </div>
 
                   <div class="info__pannel__options">
-                    <a href="#" class="info__pannel__link">
+                    <a href="#" class="info__pannel__link modalEdit">
                       <i class="info__pannel__link__icon fas fa-cog"></i>
                       <span class="info__pannel__link__text">
                         Настройки
@@ -824,6 +789,1471 @@
 </footer>
 
 <div class="mask"></div>
+
+<div class="modal modal--big" id="modalAddNumber">
+	<div class="modal__wrapper">
+		<div class="modal__head">
+			<div class="modal__title">
+				Добавление номера
+			</div>
+
+			<button type="button" class="modal__close">
+				<i class="fas fa-times"></i>
+			</button>
+		</div>
+		<div class="modal__inner">
+
+
+			<div class="modal__body">
+				<form action="/" id="addNumberForm" name="addNumberForm" class="number form">
+					<div class="number__line">
+						<div class="row">
+							<div class="custom__input__item col-6">
+								<input class="custom__input" type="tel" id="addPhone" name="addPhone" placeholder="8 924 608 хх-хх"
+									required>
+							</div>
+
+							<div class="custom__input__item col-6">
+								<input class="custom__input" type="text" id="description" name="description"
+									placeholder="Краткое описание" required>
+							</div>
+						</div>
+					</div>
+
+					<div class="number__box">
+						<h2 class="number__title title title--h3">
+							Общие настройки
+						</h2>
+
+						<div class="number__wrapper number__wrapper--blue">
+							<div class="row">
+								<div class="number__item col-6">
+									<div class="row">
+
+										<div class="custom__checkbox__item number__checkbox__item col-5">
+											<input type="checkbox" class="custom__checkbox number__checkbox" id="allDays" name="allDays"
+												checked>
+											<label class="custom__label number__label" for="allDays">Все дни недели</label>
+										</div>
+
+										<div class="number__section col-7">
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_1" id="time_1">
+															<option value="AL">9:00</option>
+															<option value="WY">10:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_2" id="time_2">
+															<option value="AL">13:00</option>
+															<option value="WY">14:00</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_3" id="time_3">
+															<option value="AL">14:00</option>
+															<option value="WY">15:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_4" id="time_4">
+															<option value="AL">19:00</option>
+															<option value="WY">20:00</option>
+														</select>
+													</div>
+												</div>
+
+												<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+													<i class="fas fa-minus"></i>
+												</button>
+											</div>
+
+											<button type="button" class="btn btn--small btn--outline number__plus">
+												<i class="fas fa-plus"></i>
+											</button>
+										</div>
+
+
+									</div>
+								</div>
+
+								<div class="number__item col-6">
+									<div class="row">
+
+										<div class="custom__checkbox__item number__checkbox__item col-5">
+											<input type="checkbox" class="custom__checkbox number__checkbox" id="weekends" name="weekends">
+											<label class="custom__label number__label" for="weekends">Выходные дни</label>
+										</div>
+
+										<div class="number__section col-7">
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_5" id="time_5">
+															<option value="AL">9:00</option>
+															<option value="WY">10:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_6" id="time_6">
+															<option value="AL">13:00</option>
+															<option value="WY">14:00</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_7" id="time_7">
+															<option value="AL">14:00</option>
+															<option value="WY">15:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_8" id="time_8">
+															<option value="AL">19:00</option>
+															<option value="WY">20:00</option>
+														</select>
+													</div>
+												</div>
+
+												<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+													<i class="fas fa-minus"></i>
+												</button>
+											</div>
+
+											<button type="button" class="btn btn--small btn--outline number__plus">
+												<i class="fas fa-plus"></i>
+											</button>
+										</div>
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="number__box">
+						<h2 class="number__title title title--h3">
+							Точечные
+						</h2>
+
+						<div class="number__list">
+							<div class="number__wrapper">
+								<div class="row">
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="monday" name="monday"
+													checked>
+												<label class="custom__label number__label" for="monday">Понедельник</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_9" id="time_9">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_10" id="time_10">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_11" id="time_11">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_12" id="time_12">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="tuesday" name="tuesday"
+													checked>
+												<label class="custom__label number__label" for="tuesday">Вторник</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_13" id="time_13">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_14" id="time_14">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_15" id="time_15">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_16" id="time_16">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="number__wrapper">
+								<div class="row">
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="wednesday" name="wednesday"
+													checked>
+												<label class="custom__label number__label" for="wednesday">Среда</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_17" id="time_17">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_18" id="time_18">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_19" id="time_19">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_20" id="time_20">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="thursday" name="thursday"
+													checked>
+												<label class="custom__label number__label" for="thursday">Четверг</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_21" id="time_21">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_22" id="time_22">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_23" id="time_23">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_24" id="time_24">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="number__wrapper">
+								<div class="row">
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="friday" name="friday"
+													checked>
+												<label class="custom__label number__label" for="friday">Пятница</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_25" id="time_25">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_26" id="time_26">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_27" id="time_27">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_28" id="time_28">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="number__range__item__wrapper">
+						<h2 class="number__title title title--h3">
+							Частота проверки
+						</h2>
+
+						<div class="number__range__item">
+							<div class="number__range__line">
+
+							</div>
+
+							<div class="number__range__list">
+								<div class="number__range__circle" data-range="1">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="2">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="3">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="4">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="5">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="6">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- <input class="number__range__input" id="edit_numberRange" name="edit_numberRange" type="range" min="0"
+								max="60" step="10"> -->
+						</div>
+					</div>
+
+					<div class="number__btn__wrapper">
+						<div class="number__btn__wrapper__left">
+							<button type="submit" class="btn number__btn__wrapper__submit">
+								Добавить номер
+							</button>
+						</div>
+
+					</div>
+
+
+
+				</form>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="modal modal--big" id="modalEdit">
+	<div class="modal__wrapper">
+		<div class="modal__head">
+			<div class="modal__title">
+				Редактирование
+			</div>
+
+			<button type="button" class="modal__close">
+				<i class="fas fa-times"></i>
+			</button>
+		</div>
+		<div class="modal__inner">
+
+
+			<div class="modal__body">
+				<form action="/" id="editNumberForm" name="editNumberForm" class="number__form form">
+					<div class="number__line">
+						<div class="row">
+							<div class="number__phone__item custom__input__item col-4">
+								<div class="info__pannel__phone__value">
+									8 924 608 хх-хх
+								</div>
+							</div>
+
+							<div class="custom__input__item col-8">
+								<input class="custom__input" type="text" id="edit_description" name="edit_description"
+									placeholder="Краткое описание" required>
+							</div>
+						</div>
+					</div>
+
+					<div class="number__box">
+						<h2 class="number__title title title--h3">
+							Общие настройки
+						</h2>
+
+						<div class="number__wrapper number__wrapper--blue">
+							<div class="row">
+								<div class="number__item col-6">
+									<div class="row">
+
+										<div class="custom__checkbox__item number__checkbox__item col-5">
+											<input type="checkbox" class="custom__checkbox number__checkbox" id="edit_allDays"
+												name="edit_allDays" checked>
+											<label class="custom__label number__label" for="edit_allDays">Все дни недели</label>
+										</div>
+
+										<div class="number__section col-7">
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_1" id="edit_time_1">
+															<option value="AL">9:00</option>
+															<option value="WY">10:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_2" id="edit_time_2">
+															<option value="AL">13:00</option>
+															<option value="WY">14:00</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_3" id="edit_time_3">
+															<option value="AL">14:00</option>
+															<option value="WY">15:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_4" id="edit_time_4">
+															<option value="AL">19:00</option>
+															<option value="WY">20:00</option>
+														</select>
+													</div>
+												</div>
+
+												<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+													<i class="fas fa-minus"></i>
+												</button>
+											</div>
+
+											<button type="button" class="btn btn--small btn--outline number__plus">
+												<i class="fas fa-plus"></i>
+											</button>
+										</div>
+
+
+									</div>
+								</div>
+
+								<div class="number__item col-6">
+									<div class="row">
+
+										<div class="custom__checkbox__item number__checkbox__item col-5">
+											<input type="checkbox" class="custom__checkbox number__checkbox" id="edit_weekends"
+												name="edit_weekends">
+											<label class="custom__label number__label" for="edit_weekends">Выходные дни</label>
+										</div>
+
+										<div class="number__section col-7">
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_5" id="edit_time_5">
+															<option value="AL">9:00</option>
+															<option value="WY">10:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_6" id="edit_time_6">
+															<option value="AL">13:00</option>
+															<option value="WY">14:00</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_7" id="edit_time_7">
+															<option value="AL">14:00</option>
+															<option value="WY">15:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_8" id="edit_time_8">
+															<option value="AL">19:00</option>
+															<option value="WY">20:00</option>
+														</select>
+													</div>
+												</div>
+
+												<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+													<i class="fas fa-minus"></i>
+												</button>
+											</div>
+
+											<button type="button" class="btn btn--small btn--outline number__plus">
+												<i class="fas fa-plus"></i>
+											</button>
+										</div>
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="number__box">
+						<h2 class="number__title title title--h3">
+							Точечные
+						</h2>
+
+						<div class="number__list">
+							<div class="number__wrapper">
+								<div class="row">
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="edit_monday"
+													name="edit_monday" checked>
+												<label class="custom__label number__label" for="edit_monday">Понедельник</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_9"
+																id="edit_time_9">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_10"
+																id="edit_time_10">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_11"
+																id="edit_time_11">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_12"
+																id="edit_time_12">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="edit_tuesday"
+													name="edit_tuesday" checked>
+												<label class="custom__label number__label" for="edit_tuesday">Вторник</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_13"
+																id="edit_time_13">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_14"
+																id="edit_time_14">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_15"
+																id="edit_time_15">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_16"
+																id="edit_time_16">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="number__wrapper">
+								<div class="row">
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="edit_wednesday"
+													name="edit_wednesday" checked>
+												<label class="custom__label number__label" for="edit_wednesday">Среда</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_17"
+																id="edit_time_17">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_18"
+																id="edit_time_18">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_19"
+																id="edit_time_19">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_20"
+																id="edit_time_20">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="edit_thursday"
+													name="edit_thursday" checked>
+												<label class="custom__label number__label" for="edit_thursday">Четверг</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_21"
+																id="edit_time_21">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_22"
+																id="edit_time_22">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_23"
+																id="edit_time_23">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_24"
+																id="edit_time_24">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="number__wrapper">
+								<div class="row">
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="edit_friday"
+													name="edit_friday" checked>
+												<label class="custom__label number__label" for="edit_friday">Пятница</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_25"
+																id="edit_time_25">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_26"
+																id="edit_time_26">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_27"
+																id="edit_time_27">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_28"
+																id="edit_time_28">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="number__range__item__wrapper">
+						<h2 class="number__title title title--h3">
+							Частота проверки
+						</h2>
+
+						<div class="number__range__item">
+							<div class="number__range__line">
+
+							</div>
+
+							<div class="number__range__list">
+								<div class="number__range__circle" data-range="1">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="2">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="3">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="4">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="5">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="6">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- <input class="number__range__input" id="edit_numberRange" name="edit_numberRange" type="range" min="0"
+								max="60" step="10"> -->
+						</div>
+					</div>
+
+					<div class="number__btn__wrapper">
+						<div class="number__btn__wrapper__left">
+							<button type="submit" class="btn number__btn__wrapper__submit">
+								Сохранить и включить
+							</button>
+
+							<button type="submit" class="btn number__btn__wrapper__submit">
+								Сохранить
+							</button>
+						</div>
+
+						<div class="number__btn__wrapper__right">
+							<button type="button" class="btn btn--outline number__btn__wrapper__delete">
+								<i class="btn__icon far fa-trash-alt"></i>
+								Сохранить
+							</button>
+						</div>
+
+					</div>
+
+
+
+				</form>
+			</div>
+		</div>
+
+	</div>
+</div>
 
 
 

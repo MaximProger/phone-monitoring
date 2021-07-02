@@ -68,24 +68,6 @@ $(document).ready(function () {
     openModal("#modalEdit");
   });
 
-  // Копирование текста в буффер обмена
-  function copytext(el) {
-    var $tmp = $("<textarea>");
-    $("body").append($tmp);
-    $tmp.val($(el).text()).select();
-    document.execCommand("copy");
-    $tmp.remove();
-  }
-
-  $(".info__pannel__copy").click(function (evt) {
-    evt.preventDefault();
-
-    const phoneValue = $(this)
-      .parent(".info__pannel__phone")
-      .find(".info__pannel__phone__value");
-    copytext(phoneValue);
-  });
-
   // Добавление/удаление строк
   $(".number__minus").click(function (evt) {
     evt.preventDefault();
@@ -130,8 +112,6 @@ $(document).ready(function () {
   									</div>
     `;
 
-    // numberSection.append(numberSectionLine);
-
     $(numberSectionLine).insertBefore($(this));
 
     $(".select__new").select2({
@@ -146,11 +126,6 @@ $(document).ready(function () {
   });
 
   // Частота проверок
-  // $(".number__range__circle__item").hover(function () {
-  //   const numberRangeCircle = $(this).parents(".number__range__circle");
-  //   numberRangeCircle.toggleClass("number__range__circle--active");
-  // });
-
   $(".number__range__circle__item").click(function () {
     $(".number__range__circle").removeClass("number__range__circle--active");
     const numberRangeCircle = $(this).parents(".number__range__circle");

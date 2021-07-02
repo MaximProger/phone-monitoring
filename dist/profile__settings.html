@@ -18,6 +18,7 @@
   <link rel="icon" href="images/favicon.png">
 
   <link rel="stylesheet" href="css/include/all.min.css">
+  <link rel="stylesheet" href="css/include/bootstrap-grid.min.css">
   <link rel="stylesheet" href="css/include/select2.min.css">
 
   <link rel="stylesheet" href="css/main.min.css">
@@ -107,9 +108,9 @@
 
               <div class="custom__select__item profile__settings__select">
                 <select class="custom__select js-example-basic-single" name="timezone" id="timezone">
-                  <option value="4">+ 4 GSM</option>
-                  <option value="3">+ 3 GSM</option>
-                  <option value="2">+ 2 GSM</option>
+                  <option value="4">+ 4 GMT</option>
+                  <option value="3">+ 3 GMT</option>
+                  <option value="2">+ 2 GMT</option>
                 </select>
               </div>
             </div>
@@ -168,6 +169,1471 @@
 </footer>
 
 <div class="mask"></div>
+
+<div class="modal modal--big" id="modalAddNumber">
+	<div class="modal__wrapper">
+		<div class="modal__head">
+			<div class="modal__title">
+				Добавление номера
+			</div>
+
+			<button type="button" class="modal__close">
+				<i class="fas fa-times"></i>
+			</button>
+		</div>
+		<div class="modal__inner">
+
+
+			<div class="modal__body">
+				<form action="/" id="addNumberForm" name="addNumberForm" class="number form">
+					<div class="number__line">
+						<div class="row">
+							<div class="custom__input__item col-6">
+								<input class="custom__input" type="tel" id="addPhone" name="addPhone" placeholder="8 924 608 хх-хх"
+									required>
+							</div>
+
+							<div class="custom__input__item col-6">
+								<input class="custom__input" type="text" id="description" name="description"
+									placeholder="Краткое описание" required>
+							</div>
+						</div>
+					</div>
+
+					<div class="number__box">
+						<h2 class="number__title title title--h3">
+							Общие настройки
+						</h2>
+
+						<div class="number__wrapper number__wrapper--blue">
+							<div class="row">
+								<div class="number__item col-6">
+									<div class="row">
+
+										<div class="custom__checkbox__item number__checkbox__item col-5">
+											<input type="checkbox" class="custom__checkbox number__checkbox" id="allDays" name="allDays"
+												checked>
+											<label class="custom__label number__label" for="allDays">Все дни недели</label>
+										</div>
+
+										<div class="number__section col-7">
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_1" id="time_1">
+															<option value="AL">9:00</option>
+															<option value="WY">10:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_2" id="time_2">
+															<option value="AL">13:00</option>
+															<option value="WY">14:00</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_3" id="time_3">
+															<option value="AL">14:00</option>
+															<option value="WY">15:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_4" id="time_4">
+															<option value="AL">19:00</option>
+															<option value="WY">20:00</option>
+														</select>
+													</div>
+												</div>
+
+												<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+													<i class="fas fa-minus"></i>
+												</button>
+											</div>
+
+											<button type="button" class="btn btn--small btn--outline number__plus">
+												<i class="fas fa-plus"></i>
+											</button>
+										</div>
+
+
+									</div>
+								</div>
+
+								<div class="number__item col-6">
+									<div class="row">
+
+										<div class="custom__checkbox__item number__checkbox__item col-5">
+											<input type="checkbox" class="custom__checkbox number__checkbox" id="weekends" name="weekends">
+											<label class="custom__label number__label" for="weekends">Выходные дни</label>
+										</div>
+
+										<div class="number__section col-7">
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_5" id="time_5">
+															<option value="AL">9:00</option>
+															<option value="WY">10:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_6" id="time_6">
+															<option value="AL">13:00</option>
+															<option value="WY">14:00</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_7" id="time_7">
+															<option value="AL">14:00</option>
+															<option value="WY">15:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="time_8" id="time_8">
+															<option value="AL">19:00</option>
+															<option value="WY">20:00</option>
+														</select>
+													</div>
+												</div>
+
+												<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+													<i class="fas fa-minus"></i>
+												</button>
+											</div>
+
+											<button type="button" class="btn btn--small btn--outline number__plus">
+												<i class="fas fa-plus"></i>
+											</button>
+										</div>
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="number__box">
+						<h2 class="number__title title title--h3">
+							Точечные
+						</h2>
+
+						<div class="number__list">
+							<div class="number__wrapper">
+								<div class="row">
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="monday" name="monday"
+													checked>
+												<label class="custom__label number__label" for="monday">Понедельник</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_9" id="time_9">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_10" id="time_10">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_11" id="time_11">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_12" id="time_12">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="tuesday" name="tuesday"
+													checked>
+												<label class="custom__label number__label" for="tuesday">Вторник</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_13" id="time_13">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_14" id="time_14">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_15" id="time_15">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_16" id="time_16">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="number__wrapper">
+								<div class="row">
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="wednesday" name="wednesday"
+													checked>
+												<label class="custom__label number__label" for="wednesday">Среда</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_17" id="time_17">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_18" id="time_18">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_19" id="time_19">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_20" id="time_20">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="thursday" name="thursday"
+													checked>
+												<label class="custom__label number__label" for="thursday">Четверг</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_21" id="time_21">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_22" id="time_22">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_23" id="time_23">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_24" id="time_24">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="number__wrapper">
+								<div class="row">
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="friday" name="friday"
+													checked>
+												<label class="custom__label number__label" for="friday">Пятница</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_25" id="time_25">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_26" id="time_26">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_27" id="time_27">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="time_28" id="time_28">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="number__range__item__wrapper">
+						<h2 class="number__title title title--h3">
+							Частота проверки
+						</h2>
+
+						<div class="number__range__item">
+							<div class="number__range__line">
+
+							</div>
+
+							<div class="number__range__list">
+								<div class="number__range__circle" data-range="1">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="2">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="3">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="4">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="5">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="6">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- <input class="number__range__input" id="edit_numberRange" name="edit_numberRange" type="range" min="0"
+								max="60" step="10"> -->
+						</div>
+					</div>
+
+					<div class="number__btn__wrapper">
+						<div class="number__btn__wrapper__left">
+							<button type="submit" class="btn number__btn__wrapper__submit">
+								Добавить номер
+							</button>
+						</div>
+
+					</div>
+
+
+
+				</form>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="modal modal--big" id="modalEdit">
+	<div class="modal__wrapper">
+		<div class="modal__head">
+			<div class="modal__title">
+				Редактирование
+			</div>
+
+			<button type="button" class="modal__close">
+				<i class="fas fa-times"></i>
+			</button>
+		</div>
+		<div class="modal__inner">
+
+
+			<div class="modal__body">
+				<form action="/" id="editNumberForm" name="editNumberForm" class="number__form form">
+					<div class="number__line">
+						<div class="row">
+							<div class="number__phone__item custom__input__item col-4">
+								<div class="info__pannel__phone__value">
+									8 924 608 хх-хх
+								</div>
+							</div>
+
+							<div class="custom__input__item col-8">
+								<input class="custom__input" type="text" id="edit_description" name="edit_description"
+									placeholder="Краткое описание" required>
+							</div>
+						</div>
+					</div>
+
+					<div class="number__box">
+						<h2 class="number__title title title--h3">
+							Общие настройки
+						</h2>
+
+						<div class="number__wrapper number__wrapper--blue">
+							<div class="row">
+								<div class="number__item col-6">
+									<div class="row">
+
+										<div class="custom__checkbox__item number__checkbox__item col-5">
+											<input type="checkbox" class="custom__checkbox number__checkbox" id="edit_allDays"
+												name="edit_allDays" checked>
+											<label class="custom__label number__label" for="edit_allDays">Все дни недели</label>
+										</div>
+
+										<div class="number__section col-7">
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_1" id="edit_time_1">
+															<option value="AL">9:00</option>
+															<option value="WY">10:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_2" id="edit_time_2">
+															<option value="AL">13:00</option>
+															<option value="WY">14:00</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_3" id="edit_time_3">
+															<option value="AL">14:00</option>
+															<option value="WY">15:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_4" id="edit_time_4">
+															<option value="AL">19:00</option>
+															<option value="WY">20:00</option>
+														</select>
+													</div>
+												</div>
+
+												<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+													<i class="fas fa-minus"></i>
+												</button>
+											</div>
+
+											<button type="button" class="btn btn--small btn--outline number__plus">
+												<i class="fas fa-plus"></i>
+											</button>
+										</div>
+
+
+									</div>
+								</div>
+
+								<div class="number__item col-6">
+									<div class="row">
+
+										<div class="custom__checkbox__item number__checkbox__item col-5">
+											<input type="checkbox" class="custom__checkbox number__checkbox" id="edit_weekends"
+												name="edit_weekends">
+											<label class="custom__label number__label" for="edit_weekends">Выходные дни</label>
+										</div>
+
+										<div class="number__section col-7">
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_5" id="edit_time_5">
+															<option value="AL">9:00</option>
+															<option value="WY">10:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_6" id="edit_time_6">
+															<option value="AL">13:00</option>
+															<option value="WY">14:00</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="number__section__line">
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														с
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_7" id="edit_time_7">
+															<option value="AL">14:00</option>
+															<option value="WY">15:00</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="custom__input__item number__input__item">
+													<div class="custom__input__title number__input__title">
+														до
+													</div>
+													<div class="number__select__item custom__select__item custom__select__item--small">
+														<select class="custom__select js-example-basic-single" name="edit_time_8" id="edit_time_8">
+															<option value="AL">19:00</option>
+															<option value="WY">20:00</option>
+														</select>
+													</div>
+												</div>
+
+												<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+													<i class="fas fa-minus"></i>
+												</button>
+											</div>
+
+											<button type="button" class="btn btn--small btn--outline number__plus">
+												<i class="fas fa-plus"></i>
+											</button>
+										</div>
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="number__box">
+						<h2 class="number__title title title--h3">
+							Точечные
+						</h2>
+
+						<div class="number__list">
+							<div class="number__wrapper">
+								<div class="row">
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="edit_monday"
+													name="edit_monday" checked>
+												<label class="custom__label number__label" for="edit_monday">Понедельник</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_9"
+																id="edit_time_9">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_10"
+																id="edit_time_10">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_11"
+																id="edit_time_11">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_12"
+																id="edit_time_12">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="edit_tuesday"
+													name="edit_tuesday" checked>
+												<label class="custom__label number__label" for="edit_tuesday">Вторник</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_13"
+																id="edit_time_13">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_14"
+																id="edit_time_14">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_15"
+																id="edit_time_15">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_16"
+																id="edit_time_16">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="number__wrapper">
+								<div class="row">
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="edit_wednesday"
+													name="edit_wednesday" checked>
+												<label class="custom__label number__label" for="edit_wednesday">Среда</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_17"
+																id="edit_time_17">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_18"
+																id="edit_time_18">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_19"
+																id="edit_time_19">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_20"
+																id="edit_time_20">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="edit_thursday"
+													name="edit_thursday" checked>
+												<label class="custom__label number__label" for="edit_thursday">Четверг</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_21"
+																id="edit_time_21">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_22"
+																id="edit_time_22">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_23"
+																id="edit_time_23">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_24"
+																id="edit_time_24">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="number__wrapper">
+								<div class="row">
+									<div class="number__item col-6">
+										<div class="row">
+
+											<div class="custom__checkbox__item number__checkbox__item col-5">
+												<input type="checkbox" class="custom__checkbox number__checkbox" id="edit_friday"
+													name="edit_friday" checked>
+												<label class="custom__label number__label" for="edit_friday">Пятница</label>
+											</div>
+
+											<div class="number__section col-7">
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_25"
+																id="edit_time_25">
+																<option value="AL">9:00</option>
+																<option value="WY">10:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_26"
+																id="edit_time_26">
+																<option value="AL">13:00</option>
+																<option value="WY">14:00</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="number__section__line">
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															с
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_27"
+																id="edit_time_27">
+																<option value="AL">14:00</option>
+																<option value="WY">15:00</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="custom__input__item number__input__item">
+														<div class="custom__input__title number__input__title">
+															до
+														</div>
+														<div class="number__select__item custom__select__item custom__select__item--small">
+															<select class="custom__select js-example-basic-single" name="edit_time_28"
+																id="edit_time_28">
+																<option value="AL">19:00</option>
+																<option value="WY">20:00</option>
+															</select>
+														</div>
+													</div>
+
+													<button type="button" class="number__minus btn btn--outline btn--small btn--onlyicon">
+														<i class="fas fa-minus"></i>
+													</button>
+												</div>
+
+												<button type="button" class="btn btn--small btn--outline number__plus">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="number__range__item__wrapper">
+						<h2 class="number__title title title--h3">
+							Частота проверки
+						</h2>
+
+						<div class="number__range__item">
+							<div class="number__range__line">
+
+							</div>
+
+							<div class="number__range__list">
+								<div class="number__range__circle" data-range="1">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="2">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="3">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="4">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="5">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="number__range__circle" data-range="6">
+									<span class="number__range__circle__item"></span>
+
+									<div class="number__range__popup">
+										<div class="number__range__popup__wrapper">
+											<span class="number__range__popup__triangle"></span>
+											<div class="number__range__popup__price">
+												478 ₽
+											</div>
+											<span class="number__range__popup__text">
+												хватит на 6 дней
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- <input class="number__range__input" id="edit_numberRange" name="edit_numberRange" type="range" min="0"
+								max="60" step="10"> -->
+						</div>
+					</div>
+
+					<div class="number__btn__wrapper">
+						<div class="number__btn__wrapper__left">
+							<button type="submit" class="btn number__btn__wrapper__submit">
+								Сохранить и включить
+							</button>
+
+							<button type="submit" class="btn number__btn__wrapper__submit">
+								Сохранить
+							</button>
+						</div>
+
+						<div class="number__btn__wrapper__right">
+							<button type="button" class="btn btn--outline number__btn__wrapper__delete">
+								<i class="btn__icon far fa-trash-alt"></i>
+								Сохранить
+							</button>
+						</div>
+
+					</div>
+
+
+
+				</form>
+			</div>
+		</div>
+
+	</div>
+</div>
 
 
 
