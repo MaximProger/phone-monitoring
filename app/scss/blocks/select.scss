@@ -2,6 +2,10 @@
   width: 100% !important;
 }
 
+.custom__select__item .select2-container {
+  width: 100% !important;
+}
+
 .custom__select__item .select2-container--default .select2-selection--single {
   display: flex;
   align-items: center;
